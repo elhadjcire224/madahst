@@ -26,16 +26,16 @@ class UserFactory extends Factory
             'id' => $this->faker->uuid,
             'nom' => $this->faker->word,
             'prenom' => $this->faker->word,
-            'password' => Hash::make('password'),
-            'addresse' => $this->faker->regexify('[A-Za-z0-9]{100}'),
-            'telephone' => $this->faker->regexify('[A-Za-z0-9]{20}'),
-            'img_url' => $this->faker->word,
+            'password' => Hash::make('123'),
+            'addresse' => $this->faker->word(),
+            'telephone' => $this->faker->numberBetween(0,10000),
+            'img_url' => $this->faker->imageUrl(),
             'genre' => $this->faker->word,
             'nationalite' => $this->faker->word,
             'email' => $this->faker->safeEmail,
             'verified' => $this->faker->boolean,
             'dob' => $this->faker->date(),
-            'userable_type' => $this->faker->word,
+            
             
         ];
     }

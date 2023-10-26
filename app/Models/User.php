@@ -2,12 +2,18 @@
 
 namespace App\Models;
 
+use App\Enums\UserType;
+use Eloquent;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use App\Models\Developpeur;
+use App\Models\Client;
+use App\Models\Employe;
+use Illuminate\Support\Collection;
+
+use function Laravel\Prompts\table;
 
 /**
  * App\Models\User
@@ -167,10 +173,22 @@ class User extends Model implements Authenticatable
         'dob' => 'date',
     ];
 
-    public function userable(): MorphTo
+    public function userable()
     {
-        return $this->morphTo(__FUNCTION__, 'userable_type', 'userable_id');
+        $userable = null;
+        if($this->userable_type == UserType::Developpeur->value){
+            $userable = Developpeur::whereId($this->userable_id)->get();
+        }else if($this->userable_type == UserType::Client->value){
+            $userable = Client::find($this->userable_id);
+        }else if($this->userable_type == UserType::Employe->value){
+            $userable = Employe::find($this->userable_id);
+        }
+
+        $this->able = $userable->toArray()[0];
+        return $this;
     }
+
+
 
     
 

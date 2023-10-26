@@ -39,10 +39,4 @@ class ClientStoreRequest extends FormRequest
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif',
         ];
     }
-
-    protected function prepareForValidation(): void
-    {
-
-        $this->merge(['id' => Str::uuid(),]);
-    }
 }

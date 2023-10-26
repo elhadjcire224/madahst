@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 
+
+
 /**
  * App\Models\Developpeur
  *
@@ -77,6 +79,6 @@ class Developpeur extends Model
 
     public function image(): MorphOne
     {
-        return $this->morphOne(User::class,"userable");
+        return $this->morphOne(User::class,"",'userable_type','userable_id');
     }
 }

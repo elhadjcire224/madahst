@@ -7,6 +7,7 @@ use App\Models\Client;
 use App\Models\Developpeur;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 use function Pest\Laravel\instance;
 
@@ -22,24 +23,7 @@ use function Pest\Laravel\instance;
 */
 
 Route::get('/', function () {
-    // $user = new User();
-    // $user->id = Str::uuid();
-    // $user->nom = 'John';
-    // $user->prenom = 'Doe';
-    // $user->email = 'john@example.com';
-    // $user->password = Hash::make('password');
-    // $user->telephone = '+2246255514';
-    // $user->addresse = 'cite';
-    // $user->genre = Genre::Homme->value;
-    // $user->nationalite = 'guinne';
-    // $user->dob = '04-04-2004';
-    // $user->img_url = 'https://lol.png';
-    // ;
-
-    // $client = new Client();
-    // $user->userable()->save($client);
-    // $user = Client::all()->last();
-    // dd($user->user);
+    return 'Bonjour';
 });
 
 Route::get('/dashboard', function () {

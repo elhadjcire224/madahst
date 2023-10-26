@@ -50,7 +50,7 @@ class Client extends Model
 
     public function user(): MorphOne
     {
-        return $this->morphOne(User::class,"userable",'userable_type','userable_id');
+        return $this->morphOne(User::class,"",'userable_type','userable_id');
     }
 
 }

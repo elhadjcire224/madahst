@@ -59,6 +59,6 @@ class Employe extends Model
 
     public function image(): MorphOne
     {
-        return $this->morphOne(User::class,"userable");
+        return $this->morphOne(User::class,"",'userable_type','userable_id');
     }
 }

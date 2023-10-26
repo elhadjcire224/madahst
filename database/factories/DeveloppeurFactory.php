@@ -25,7 +25,7 @@ class DeveloppeurFactory extends Factory
             'id' => $this->faker->uuid,
             'specialite' => $this->faker->word,
             'user_id' => User::factory(),
-            'is_instructor' => $this->faker->boolean,
+            'is_instructor' => $this->faker->boolean(),
         ];
     }
 }

@@ -1,0 +1,280 @@
+.
+├── app
+│   ├── Console
+│   │   └── Kernel.php
+│   ├── Enums
+│   │   ├── Genre.php
+│   │   └── UserType.php
+│   ├── Exceptions
+│   │   └── Handler.php
+│   ├── Http
+│   │   ├── Controllers
+│   │   │   ├── Auth
+│   │   │   │   ├── AuthenticatedSessionController.php
+│   │   │   │   ├── ConfirmablePasswordController.php
+│   │   │   │   ├── EmailVerificationNotificationController.php
+│   │   │   │   ├── EmailVerificationPromptController.php
+│   │   │   │   ├── NewPasswordController.php
+│   │   │   │   ├── PasswordController.php
+│   │   │   │   ├── PasswordResetLinkController.php
+│   │   │   │   ├── RegisteredUserController.php
+│   │   │   │   └── VerifyEmailController.php
+│   │   │   ├── BoutiqueController.php
+│   │   │   ├── CategoryController.php
+│   │   │   ├── ClientController.php
+│   │   │   ├── Controller.php
+│   │   │   ├── FormationController.php
+│   │   │   ├── ModuleController.php
+│   │   │   ├── ProduitController.php
+│   │   │   ├── ProfileController.php
+│   │   │   ├── ProjetController.php
+│   │   │   └── StockController.php
+│   │   ├── Kernel.php
+│   │   ├── Middleware
+│   │   │   ├── Authenticate.php
+│   │   │   ├── EncryptCookies.php
+│   │   │   ├── PreventRequestsDuringMaintenance.php
+│   │   │   ├── RedirectIfAuthenticated.php
+│   │   │   ├── TrimStrings.php
+│   │   │   ├── TrustHosts.php
+│   │   │   ├── TrustProxies.php
+│   │   │   ├── ValidateSignature.php
+│   │   │   └── VerifyCsrfToken.php
+│   │   └── Requests
+│   │       ├── Auth
+│   │       │   └── LoginRequest.php
+│   │       ├── BoutiqueStoreRequest.php
+│   │       ├── BoutiqueUpdateRequest.php
+│   │       ├── CategoryStoreRequest.php
+│   │       ├── CategoryUpdateRequest.php
+│   │       ├── Client
+│   │       │   ├── ClientStoreRequest.php
+│   │       │   └── ClientUpdateRequest.php
+│   │       ├── ModuleStoreRequest.php
+│   │       ├── ModuleUpdateRequest.php
+│   │       ├── ProduitStoreRequest.php
+│   │       ├── ProduitUpdateRequest.php
+│   │       ├── ProfileUpdateRequest.php
+│   │       ├── ProjetStoreRequest.php
+│   │       ├── ProjetUpdateRequest.php
+│   │       ├── StockStoreRequest.php
+│   │       ├── StockUpdateRequest.php
+│   │       ├── StoreFormationRequest.php
+│   │       └── UpdateFormationRequest.php
+│   ├── Models
+│   │   ├── Boutique.php
+│   │   ├── Category.php
+│   │   ├── Client.php
+│   │   ├── Commande.php
+│   │   ├── Detail.php
+│   │   ├── Developpeur.php
+│   │   ├── Document.php
+│   │   ├── Employe.php
+│   │   ├── Entrepise.php
+│   │   ├── Formation.php
+│   │   ├── Module.php
+│   │   ├── Particulier.php
+│   │   ├── Produit.php
+│   │   ├── Projet.php
+│   │   ├── Stock.php
+│   │   └── User.php
+│   ├── Providers
+│   │   ├── AppServiceProvider.php
+│   │   ├── AuthServiceProvider.php
+│   │   ├── BroadcastServiceProvider.php
+│   │   ├── EventServiceProvider.php
+│   │   └── RouteServiceProvider.php
+│   └── View
+│       └── Components
+│           ├── AppLayout.php
+│           ├── GuestLayout.php
+│           └── Input.php
+├── artisan
+├── bootstrap
+│   ├── app.php
+│   └── cache
+│       ├── packages.php
+│       └── services.php
+├── composer.json
+├── composer.lock
+├── config
+│   ├── app.php
+│   ├── auth.php
+│   ├── broadcasting.php
+│   ├── cache.php
+│   ├── cors.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── hashing.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── sanctum.php
+│   ├── services.php
+│   ├── session.php
+│   └── view.php
+├── database
+│   ├── database.sqlite
+│   ├── factories
+│   │   ├── BoutiqueFactory.php
+│   │   ├── CategoryFactory.php
+│   │   ├── ClientFactory.php
+│   │   ├── CommandeFactory.php
+│   │   ├── DetailFactory.php
+│   │   ├── DeveloppeurFactory.php
+│   │   ├── DocumentFactory.php
+│   │   ├── EmployeFactory.php
+│   │   ├── EntrepiseFactory.php
+│   │   ├── FormationFactory.php
+│   │   ├── ModuleFactory.php
+│   │   ├── ParticulierFactory.php
+│   │   ├── ProduitFactory.php
+│   │   ├── ProjetFactory.php
+│   │   ├── StockFactory.php
+│   │   └── UserFactory.php
+│   ├── migrations
+│   │   ├── 2014_10_12_000000_create_users_table.php
+│   │   ├── 2014_10_12_100000_create_password_reset_tokens_table.php
+│   │   ├── 2019_08_19_000000_create_failed_jobs_table.php
+│   │   ├── 2019_12_14_000001_create_personal_access_tokens_table.php
+│   │   ├── 2023_10_11_003608_create_clients_table.php
+│   │   ├── 2023_10_11_003609_create_developpeurs_table.php
+│   │   ├── 2023_10_11_003610_create_employes_table.php
+│   │   ├── 2023_10_11_003611_create_boutiques_table.php
+│   │   ├── 2023_10_11_003612_create_stocks_table.php
+│   │   ├── 2023_10_11_003613_create_categories_table.php
+│   │   ├── 2023_10_11_003614_create_produits_table.php
+│   │   ├── 2023_10_11_003615_create_commandes_table.php
+│   │   ├── 2023_10_11_003616_create_details_table.php
+│   │   ├── 2023_10_11_003617_create_modules_table.php
+│   │   ├── 2023_10_11_003618_create_formations_table.php
+│   │   ├── 2023_10_11_003619_create_projets_table.php
+│   │   ├── 2023_10_11_003620_create_documents_table.php
+│   │   ├── 2023_10_11_003621_create_entrepises_table.php
+│   │   ├── 2023_10_11_003622_create_particuliers_table.php
+│   │   ├── 2023_10_11_003623_create_developpeur_formation_table.php
+│   │   ├── 2023_10_11_003624_create_produit_stock_table.php
+│   │   ├── 2023_10_11_003625_create_commande_detail_table.php
+│   │   ├── 2023_10_11_003626_create_formation_module_table.php
+│   │   ├── 2023_10_11_003627_create_developpeur_projet_table.php
+│   │   ├── 2023_10_11_003628_create_document_projet_table.php
+│   │   └── 2023_10_13_023502_rename_tel_to_telephone_in_users_table.php
+│   └── seeders
+│       └── DatabaseSeeder.php
+├── draft.yaml
+├── _ide_helper_models.php
+├── _ide_helper.php
+├── package.json
+├── phpunit.xml
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── public
+│   ├── favicon.ico
+│   ├── hot
+│   ├── index.php
+│   └── robots.txt
+├── README.md
+├── resources
+│   ├── css
+│   │   └── app.css
+│   ├── js
+│   │   ├── app.js
+│   │   └── bootstrap.js
+│   └── views
+│       ├── auth
+│       │   ├── confirm-password.blade.php
+│       │   ├── forgot-password.blade.php
+│       │   ├── login.blade.php
+│       │   ├── register.blade.php
+│       │   ├── reset-password.blade.php
+│       │   └── verify-email.blade.php
+│       ├── boutique
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── categorie
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── client
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── components
+│       │   ├── application-logo.blade.php
+│       │   ├── auth-session-status.blade.php
+│       │   ├── danger-button.blade.php
+│       │   ├── dropdown.blade.php
+│       │   ├── dropdown-link.blade.php
+│       │   ├── input.blade.php
+│       │   ├── input-error.blade.php
+│       │   ├── input-label.blade.php
+│       │   ├── modal.blade.php
+│       │   ├── nav-link.blade.php
+│       │   ├── primary-button.blade.php
+│       │   ├── responsive-nav-link.blade.php
+│       │   ├── secondary-button.blade.php
+│       │   └── text-input.blade.php
+│       ├── dashboard.blade.php
+│       ├── layouts
+│       │   ├── app.blade.php
+│       │   ├── guest.blade.php
+│       │   └── navigation.blade.php
+│       ├── module
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── produit
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── profile
+│       │   ├── edit.blade.php
+│       │   └── partials
+│       │       ├── delete-user-form.blade.php
+│       │       ├── update-password-form.blade.php
+│       │       └── update-profile-information-form.blade.php
+│       ├── projet
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       ├── stock
+│       │   ├── create.blade.php
+│       │   └── index.blade.php
+│       └── welcome.blade.php
+├── routes
+│   ├── admin.php
+│   ├── api.php
+│   ├── auth.php
+│   ├── channels.php
+│   ├── console.php
+│   └── web.php
+├── storage
+│   ├── app
+│   │   └── public
+│   │       └── profiles
+│   │           ├── bahb03f4af4-06c5-4fef-adde-f2b098094d02.png
+│   │           ├── name05c7fe68-11d4-4a76-b6dc-fa878393166a.png
+│   │           ├── name1adafc51-8538-4227-a694-2fd875647187
+│   │           ├── name1cac4b00-6b83-4792-83c1-f33030136163.png
+│   │           ├── name24bb1dbb-23ee-4f8c-83e4-5cec757588cd
+│   │           ├── name26b9ba6f-eb45-4c78-8afd-973e43d849ca
+│   │           ├── name283d0b25-b46f-470b-8498-25ae2d0cd3ec.png
+│   │           ├── name57dfc31f-7403-40df-98f5-b8839d70c178
+│   │           ├── name6f51da1a-488e-40cd-8e79-aab7771a25cb
+│   │           ├── name7bf05303-53f5-4255-ae96-711fb8268a5b.png
+│   │           ├── name81ca7010-33b9-4fd7-b54e-41ae8f710011.png
+│   │           ├── name89fadbfa-53bd-4e6c-9c9d-a1481bcfd0d3.png
+│   │           ├── nameaf0c1de1-dc4c-46e9-a8cd-a489f3ff9483
+│   │           ├── namec4c7bd7e-0d8c-46c8-92bf-09958af62c83.png
+│   │           ├── named166e497-4b28-4280-b945-627543c6c99c.png
+│   │           ├── nameeb3d0246-7b0f-4929-afa3-d8a069a1aeeb.png
+│   │           ├── namef1e0906a-0dea-4a2e-9f77-ee41fe1e2b94.png
+│   │           ├── nom0715f5ce-9bf4-45d8-99b9-bea903141449.png
+│   │           ├── nom1acd17d3-e074-4535-9a6f-60e32495b0e4.png
+│   │           ├── nom69db16f7-f9fd-481c-9920-a6c14934d335.png
+│   │           ├── nom855cf59b-5674-4939-af07-99eafe43867a.png
+│   │           ├── noma70cc732-1c28-40a4-93ad-0ddca387a1ed.png
+│   │           ├── nomaed295b5-7014-4bc9-abc0-774b8582c293.png
+│   │           └── nombeaa9129-c1c7-40fe-a057-b126baf4f66a.png
+│   └── logs
+│       └── laravel.log
+├── structure.txt
+├── tailwind.config.js
+└── vite.config.js
+
+46 directories, 232 files
