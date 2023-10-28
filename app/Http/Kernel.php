@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\admin;
 use App\Http\Middleware\verifieduser;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -23,6 +24,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         verifieduser::class,
+        admin::class,
     ];
 
     /**
@@ -67,5 +69,6 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'verifieduser'=> verifieduser::class,
+        'admin'=>admin::class,
     ];
 }
