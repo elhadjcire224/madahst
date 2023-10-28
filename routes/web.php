@@ -2,6 +2,7 @@
 
 use App\Enums\Genre;
 use App\Enums\UserType;
+use App\Exceptions\UserNotVerifiedException;
 use App\Http\Controllers\ProfileController;
 use App\Models\Client;
 use App\Models\Developpeur;
@@ -23,12 +24,12 @@ use function Pest\Laravel\instance;
 */
 
 Route::get('/', function () {
-    return 'Bonjour';
+   
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth', 'verified','verifieduser'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -37,18 +38,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
-
-Route::resource('client', App\Http\Controllers\ClientController::class)->except('edit', 'show');
-
-Route::resource('stock', App\Http\Controllers\StockController::class)->except('edit', 'show');
-
-Route::resource('boutique', App\Http\Controllers\BoutiqueController::class)->except('edit', 'show');
-
-Route::resource('category', App\Http\Controllers\CategoryController::class)->except('edit', 'show');
-
-Route::resource('produit', App\Http\Controllers\ProduitController::class)->except('edit', 'show');
-
-Route::resource('module', App\Http\Controllers\ModuleController::class)->except('edit', 'show');
-
-Route::resource('projet', App\Http\Controllers\ProjetController::class)->except('edit', 'show');
+require __DIR__.'/admin.php';

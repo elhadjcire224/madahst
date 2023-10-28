@@ -35,6 +35,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Developpeur whereSpecialite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Developpeur whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Developpeur whereUserId($value)
+ * @property-read \App\Models\User|null $image
  * @mixin \Eloquent
  */
 class Developpeur extends Model

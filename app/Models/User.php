@@ -60,6 +60,7 @@ use function Laravel\Prompts\table;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUserableType($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereVerified($value)
  * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class User extends Model implements Authenticatable
 {

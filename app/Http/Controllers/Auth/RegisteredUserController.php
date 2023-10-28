@@ -36,9 +36,11 @@ class RegisteredUserController extends Controller
     public function store(ClientStoreRequest $request): RedirectResponse
     {
         $clientuuid = Str::uuid();
-        $path = Storage::disk('public')->putFileAs(
-            'profiles', $request->file('photo'), $request->nom.$clientuuid.".{$request->file('photo')->extension()}"
-        );
+        if($request->has('photo') and $request->file('photo') != null){
+            $path = Storage::disk('public')->putFileAs(
+                'profiles', $request->file('photo'), $request->nom.$clientuuid.".{$request->file('photo')->extension()}"
+            );
+        }
         
 
         $user = User::create([
@@ -50,7 +52,7 @@ class RegisteredUserController extends Controller
             ...array_slice($request->validated(),0,8)
             
         ]);
-        $client = Client::create([
+        Client::create([
             'id' => $clientuuid,
             'user_id'=> $user->id,
         ]);

@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
  * @method static \Illuminate\Database\Eloquent\Builder|Employe wherePoste($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Employe whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Employe whereUserId($value)
+ * @property-read \App\Models\User|null $image
  * @mixin \Eloquent
  */
 class Employe extends Model
