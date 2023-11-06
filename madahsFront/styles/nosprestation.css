@@ -1,0 +1,73 @@
+@import url('./style.css');
+header{
+    height: 50vh !important;
+}
+
+.page-content{
+    background-color: #8a2be2;
+    padding: 20px;
+    overflow: hidden;
+    color: #fff !important;
+}
+
+.page-content p{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.prestations{
+    padding: 10%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.prestation{
+    position: relative ;
+    flex-basis: 45% !important;
+    
+    border: 1px solid #fff !important;
+    padding:30px 48px !important;
+    border-radius: 5px !important;
+    
+}
+
+.prestation .image{
+    position: absolute;
+    height: 105px;
+    width: 85px;
+    background-color: #fff;
+    border-radius: 5px;
+    left: calc(-85px / 2);
+    overflow: hidden;
+}
+
+/* .prestation:nth-child(4){
+    background: #000;
+    width: 2px;
+} */
+.prestation img{
+    width: 100%;
+}
+
+h4{
+    word-wrap: break-word;
+    font-size: 2em;
+}
+
+@media screen and (max-width: 766px){
+    h1{
+        font-size: 1.5em;
+        margin: 5%;
+    }
+    .prestations{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,450px));
+        
+    }
+
+    
+}
+
