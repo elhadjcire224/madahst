@@ -1,0 +1,56 @@
+@import url("./style.css");
+
+header {
+    height: 50vh !important;
+}
+
+.modules {
+    background: #eee;
+    margin: 5%;
+    padding: 5%;
+    line-height: 2em;
+}
+
+.modules h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 5%;
+}
+.module > p {
+    color: #46707f;
+    margin-bottom: 30px;
+}
+.module-infos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    justify-content: center;
+}
+.module-infos * {
+    flex-basis: 47%;
+    flex-grow: 1;
+}
+.module img {
+    width: 80%;
+}
+
+.langages img {
+    width: 40% !important;
+}
+
+.langage {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 10%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.langage .text {
+    text-align: left;
+}
+
+.text h3 {
+    font-size: 2em;
+}

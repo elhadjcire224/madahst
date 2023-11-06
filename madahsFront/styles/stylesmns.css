@@ -1,0 +1,58 @@
+@import url('./style.css');
+header{
+    height: 50vh !important;
+}
+
+/* debut du pa */
+.nous{
+    
+    text-align: center;
+    color: #fff;
+    /* font-size: 1.5em; */
+    
+}
+.section{
+    color: #46707f;
+    background: #f5fafd;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    justify-content: center;
+    gap: 70px;
+}
+.section *{
+    flex-basis: 40%;
+    flex-grow: 1;
+
+}
+.section-1{
+    box-shadow: 8px 1px 1px #46707f;
+    padding: 36px 54px;
+    border-radius: 5px;
+    background: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* transform: translateX(-5px) translateY(O); */
+}
+.section-1 p{
+    margin-bottom: 60px;
+    font-size: 13px;
+    color: rgb(70, 112, 127);
+    line-height: 1.6;
+    font-family: open Sans;
+    font-weight: 500;
+}
+.section-1 h3{
+    margin-top: 30px;
+    color: black;
+}
+.section-2 img{
+    width: 100%;
+}
+@media screen and (max-width:766px) {
+    .nous{
+        font-size: 1.5em;
+        margin-top: 70px
+    }
+}
