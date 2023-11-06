@@ -16,7 +16,7 @@
         <div class="flex justify-between items-center px-6">
             <!-- Ícono de Menú (cyan) -->
             <button id="menu-button" onclick="expandSidebar()">
-               lol <i class="fas fa-bars text-cyan-500 text-lg"></i>
+            <i class="fas fa-bars text-cyan-500 text-lg"></i>
             </button>
             <!-- Logo (centrado) -->
             <div class="mx-auto">

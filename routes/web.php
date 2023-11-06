@@ -24,7 +24,7 @@ use function Pest\Laravel\instance;
 */
 
 Route::get('/', function () {
-   
+   return view('layouts.admin');
 });
 
 Route::get('/dashboard', function () {

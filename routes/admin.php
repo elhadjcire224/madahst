@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormationController;
+use App\Http\Controllers\ServiceController;
 
 Route::middleware(['auth','admin'])->prefix('admin')->name('admin')->group(function () {
 
@@ -19,4 +20,6 @@ Route::middleware(['auth','admin'])->prefix('admin')->name('admin')->group(funct
     Route::resource('projet', App\Http\Controllers\ProjetController::class);
 
     Route::resource('formations',FormationController::class);
+
+    Route::resource('services',ServiceController::class);
 });
